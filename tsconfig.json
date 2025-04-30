@@ -9,13 +9,13 @@
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
-    "typeRoots": ["./node_modules/@types", "./types"],
-    "types": ["node","jest", "@testing-library/jest-dom"]
-
+    "types": ["jest", "node"]
   },
-  "files": [],
-  "include": ["src", "__tests__", "src/types"],
-  "exclude": ["**/*.test.tsx", "**/*.test.ts"],
+  "exclude": [
+    "node_modules",
+    "**/*.test.ts",
+    "**/*.test.tsx"
+  ],
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
