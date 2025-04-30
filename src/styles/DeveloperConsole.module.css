@@ -1,0 +1,28 @@
+.console {
+    background-color: #111;
+    color: #00ff90;
+    padding: 1rem;
+    border-radius: 10px;
+    font-family: monospace;
+    font-size: 0.9rem;
+  }
+  
+  .title {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .logBox {
+    background-color: #222;
+    padding: 0.75rem;
+    border-radius: 6px;
+    border: 1px solid #333;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  
+  .log {
+    margin-bottom: 0.4rem;
+  }
+  

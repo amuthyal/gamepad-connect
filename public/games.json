@@ -1,0 +1,18 @@
+[
+    {
+      "id": "speed-racer",
+      "name": "Speed Racer",
+      "layout": ["left", "right", "accelerate", "brake"]
+    },
+    {
+      "id": "battle-zone",
+      "name": "Battle Zone",
+      "layout": ["up", "down", "punch", "kick", "block"]
+    },
+    {
+      "id": "astro-jump",
+      "name": "Astro Jump",
+      "layout": ["jump", "jet", "boost"]
+    }
+  ]
+  
