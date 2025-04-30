@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "test": "jest",
-    "build": "tsc -b && vite build",
+   "build": "tsc -p tsconfig.json && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
