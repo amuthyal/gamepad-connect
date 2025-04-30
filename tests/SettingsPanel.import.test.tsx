@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import { SettingsPanel } from './components/SettingsPanel';
+import { SettingsPanel } from '../src/components/SettingsPanel';
 
 // ✅ Zustand store mock inline
 const importMappingsMock = jest.fn();

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import App from './App'; // Update if your component wrapper is different
+import App from '../src/App'; // Update if your component wrapper is different
 
 // ✅ Mock global fetch for GameSelector
 beforeAll(() => {

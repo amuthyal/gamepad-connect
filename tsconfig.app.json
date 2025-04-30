@@ -23,5 +23,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src"]
+  "include": ["src", "tests/App.integration.test.tsx", "tests/Controller.edge.test.tsx", "tests/Controller.log.test.tsx", "tests/Controller.test.tsx", "tests/Controller.ws.test.tsx", "tests/GameSelector.test.tsx", "tests/SettingsPanel.import.test.tsx", "tests/SettingsPanel.test.tsx"]
 }

@@ -2,8 +2,8 @@
 
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import { Controller } from './components/Controller';
-import { SettingsPanel } from './components/SettingsPanel';
+import { Controller } from '../src/components/Controller';
+import { SettingsPanel } from '../src/components/SettingsPanel';
 
 // ✅ Mock Zustand with no selected game
 const resetMappingMock = jest.fn();

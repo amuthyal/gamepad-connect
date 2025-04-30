@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import { Controller } from './components/Controller';
+import { Controller } from '../src/components/Controller';
 
 // ✅ Mock Zustand
 jest.mock('./hooks/useGameStore', () => ({
