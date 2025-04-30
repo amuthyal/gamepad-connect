@@ -9,13 +9,16 @@
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
-    "types": ["jest", "node"]
+    "types": ["jest", "node"],
+    "declaration": false,
+    "emitDeclarationOnly": false
   },
+  "include": ["src"],
   "exclude": [
     "node_modules",
+    "tests",
     "**/*.test.ts",
-    "**/*.test.tsx",
-    "tests/"
+    "**/*.test.tsx"
   ],
   "references": [
     { "path": "./tsconfig.app.json" },
