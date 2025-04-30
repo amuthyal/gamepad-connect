@@ -2,11 +2,14 @@ import React, { useState } from 'react';
 import styles from '../styles/Controller.module.css';
 import { useGameStore } from '../hooks/useGameStore';
 import { toast } from 'react-toastify';
+import { useWebSocket } from '../hooks/useWebSocket';
 
 export const Controller: React.FC = () => {
   const { selectedGame, mappings, setMapping } = useGameStore();
   const [editIndex, setEditIndex] = useState<number | null>(null);
   const [newLabel, setNewLabel] = useState('');
+  const [logs, setLogs] = useState<string[]>([]);
+  const { send } = useWebSocket();
 
   if (!selectedGame) return null;
 
@@ -20,6 +23,13 @@ export const Controller: React.FC = () => {
     toast.success(`Mapped "${original}" to "${newLabel}"`);
     setEditIndex(null);
     setNewLabel('');
+  };
+
+  const handlePress = (label: string, idx: number) => {
+    send(`Button pressed: ${label}`);
+    setLogs((prev) => [...prev.slice(-9), `[WS] Button pressed: ${label}`]);
+    setEditIndex(idx);
+    setNewLabel(label);
   };
 
   return (
@@ -41,15 +51,23 @@ export const Controller: React.FC = () => {
             <button
               key={idx}
               className={styles.gameButton}
-              onClick={() => {
-                setEditIndex(idx);
-                setNewLabel(label);
-              }}
+              onClick={() => handlePress(label, idx)}
             >
               {label}
             </button>
           )
         )}
+      </div>
+
+      <div className={styles.console}>
+        <h4>Input Log</h4>
+        <ul className={styles.logList}>
+          {logs.map((log, i) => (
+            <li key={i} className={styles.logItem}>
+              {log}
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
